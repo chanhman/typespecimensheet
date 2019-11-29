@@ -39,25 +39,3 @@ body {
 
   transition: all $transition-duration ease;
 }
-
-.grid1,
-.grid2,
-.grid3 {
-  display: grid;
-  grid-gap: $spacing * 2;
-}
-
-.grid1,
-.grid2 {
-  padding-bottom: $spacing * 2;
-}
-
-.grid1 {
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-
-  text-align: center;
-}
-
-.grid2 {
-  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-}
