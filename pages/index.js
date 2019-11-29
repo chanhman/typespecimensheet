@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
+
 import classes from 'classnames'
 import fetch from 'isomorphic-unfetch'
 import uuid from 'react-uuid'
+
+import Headings from '../components/Headings';
+import TypefaceBasics from '../components/TypefaceBasics';
+import TypefaceName from '../components/TypefaceName'
 import css from "./index.scss"
 
 const Home = ({ nyt }) => {
@@ -17,24 +22,8 @@ const Home = ({ nyt }) => {
           <div className={css.toggle}>📏</div>
         </div>
 
-        <header className={css.typefaceName}>
-          <h1>Title</h1>
-          <p>Read the news while testing out a typeface.</p>
-        </header>
-
-        <div className={css.typefaceBasics}>
-          <h1>
-            A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-          </h1>
-
-          <h1>
-            a b c d e f g h i j k l m n o p q r s t u v w x y z
-          </h1>
-
-          <h1>
-            1 2 3 4 5 6 7 8 9 0
-          </h1>
-        </div>
+        <TypefaceName />
+        <TypefaceBasics />
 
         <div className={css.grid1}>
           {nyt.slice(18, 20).map(article => (
@@ -84,26 +73,7 @@ const Home = ({ nyt }) => {
           ))}
         </div>
 
-        <div>
-          {nyt.slice(12, 13).map(article => (
-            <h1 className={css.heading}><span>Heading 1</span>{article.title}</h1>
-          ))}
-          {nyt.slice(13, 14).map(article => (
-            <h2 className={css.heading}><span>Heading 2</span>{article.title}</h2>
-          ))}
-          {nyt.slice(14, 15).map(article => (
-            <h3 className={css.heading}><span>Heading 3</span>{article.title}</h3>
-          ))}
-          {nyt.slice(15, 16).map(article => (
-            <h4 className={css.heading}><span>Heading 4</span>{article.title}</h4>
-          ))}
-          {nyt.slice(16, 17).map(article => (
-            <h5 className={css.heading}><span>Heading 5</span>{article.title}</h5>
-          ))}
-          {nyt.slice(17, 18).map(article => (
-            <h6 className={css.heading}><span>Heading 6</span>{article.title}</h6>
-          ))}
-        </div>
+        <Headings data={ nyt } />
       </div>
     </div >
   )
