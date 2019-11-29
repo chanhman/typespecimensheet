@@ -5,6 +5,7 @@ import fetch from 'isomorphic-unfetch'
 
 import Grid from '../components/Grid'
 import Headings from '../components/Headings'
+import Toggles from '../components/Toggles'
 import TypefaceBasics from '../components/TypefaceBasics'
 import TypefaceName from '../components/TypefaceName'
 import css from './index.scss'
@@ -15,12 +16,7 @@ const Home = ({ nyt }) => {
   return (
     <div className={classes(css.outer, nightMode ? css.nightMode : '')}>
       <div className={css.container}>
-        <div className={css.toggles}>
-          <div className={css.toggle} onClick={() => setNightMode(!nightMode)}>
-            {nightMode ? '🌞' : '🌒'}
-          </div>
-          <div className={css.toggle}>📏</div>
-        </div>
+        <Toggles nightMode={nightMode} setNightMode={setNightMode} />
         <TypefaceName />
         <TypefaceBasics />
         <Grid data={nyt} />

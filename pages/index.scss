@@ -6,23 +6,6 @@ body {
   margin: 0;
 }
 
-.toggles {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-}
-
-.toggle {
-  padding: 0.5rem;
-
-  cursor: pointer;
-  transition: all $transition-duration ease;
-
-  &:hover {
-    transform: scale(1.25);
-  }
-}
-
 .container {
   margin-right: auto;
   margin-left: auto;
