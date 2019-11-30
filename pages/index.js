@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import classes from 'classnames'
 import fetch from 'isomorphic-unfetch'
 
+import Editor from '../components/Editor'
 import Grid from '../components/Grid'
 import Headings from '../components/Headings'
 import Toggles from '../components/Toggles'
@@ -12,11 +13,18 @@ import css from './index.scss'
 
 const Home = ({ nyt }) => {
   const [nightMode, setNightMode] = useState(false)
+  const [editor, setEditor] = useState(false)
 
   return (
     <div className={classes(css.outer, nightMode ? css.nightMode : '')}>
-      <div className={css.container}>
-        <Toggles nightMode={nightMode} setNightMode={setNightMode} />
+      <Editor editor={editor} />
+      <div className={classes(css.inner, editor ? css.innerAbsolute : '')}>
+        <Toggles
+          nightMode={nightMode}
+          setNightMode={setNightMode}
+          editor={editor}
+          setEditor={setEditor}
+        />
         <TypefaceName />
         <TypefaceBasics />
         <Grid data={nyt} />

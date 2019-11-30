@@ -6,13 +6,22 @@ body {
   margin: 0;
 }
 
-.container {
+.outer {
+  position: relative;
+  display: flex;
+}
+
+.inner {
   margin-right: auto;
   margin-left: auto;
-  padding: ($spacing * 3) $spacing;
+  padding: ($spacing * 2) $spacing;
   max-width: 64rem;
+}
 
-  transition: all $transition-duration ease;
+.innerAbsolute {
+  margin-left: 380px;
+  padding-right: $spacing * 2;
+  padding-left: $spacing * 2;
 }
 
 .nightMode {

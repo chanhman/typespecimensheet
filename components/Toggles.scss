@@ -1,9 +1,10 @@
 $transition-duration: 0.3s;
 
 .toggles {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  position: relative;
+  top: -1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .toggle {

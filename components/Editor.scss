@@ -1,0 +1,15 @@
+$transition-duration: 0.3s;
+
+.editor {
+  width: 0;
+  overflow: hidden;
+
+  background-color: #272822;
+}
+
+.editorDisplay {
+  position: fixed;
+
+  height: 100%;
+  width: 380px;
+}
