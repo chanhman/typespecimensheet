@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+
+.container {
+  padding: 1rem;
+
+  background-color: #272822;
+
+  &:not(:last-child) { margin-bottom: 1rem;}
+}
+
+.name {
+  margin-bottom: 0.5rem;
+
+  color: #ffffff;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-family: 'Ubuntu Mono', monospace;
+
+}
+
+.value {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 0.25rem;
+  }
+
+  /* Remove Arrows/Spinners: Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Remove Arrows/Spinners: Firefox */
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
+}
+
+.label {
+  color: #60D9F1;
+}
+
+.input {
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+  width: 2rem;
+
+  color: #ffffff;
+
+  background-color: transparent;
+  border: 1px solid #464741;
+
+  &:focus {
+    border-color: #767771;
+  }
+}
+
+.unit {
+  color: #FC1E70;
+}
