@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import classes from 'classnames'
 import fetch from 'isomorphic-unfetch'
+import PropTypes from 'prop-types'
 
 import Editor from '../components/Editor'
 import Grid from '../components/Grid'
@@ -40,6 +41,10 @@ Home.getInitialProps = async () => {
   )
   const json = await res.json()
   return { nyt: json.results }
+}
+
+Home.propTypes = {
+  nyt: PropTypes.array
 }
 
 export default Home

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import PropTypes from 'prop-types'
+
 import css from './Headings.scss'
 
 const Headings = ({ data }) => (
@@ -42,5 +44,9 @@ const Headings = ({ data }) => (
     ))}
   </div>
 )
+
+Headings.propTypes = {
+  data: PropTypes.array
+}
 
 export default Headings

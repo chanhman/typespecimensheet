@@ -1,5 +1,6 @@
 import React from 'react'
 
+import PropTypes from 'prop-types'
 import uuid from 'react-uuid'
 
 import css from './Grid.scss'
@@ -55,5 +56,9 @@ const Grid = ({ data }) => (
     </div>
   </>
 )
+
+Grid.propTypes = {
+  data: PropTypes.array
+}
 
 export default Grid

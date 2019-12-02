@@ -1,5 +1,7 @@
 import React from 'react'
 
+import PropTypes from 'prop-types'
+
 import css from './Toggles.scss'
 
 const Toggles = ({ nightMode, setNightMode, editor, setEditor }) => (
@@ -12,5 +14,12 @@ const Toggles = ({ nightMode, setNightMode, editor, setEditor }) => (
     </div>
   </div>
 )
+
+Toggles.propTypes = {
+  nightMode: PropTypes.bool,
+  setNightMode: PropTypes.func,
+  editor: PropTypes.bool,
+  setEditor: PropTypes.func
+}
 
 export default Toggles
